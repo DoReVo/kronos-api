@@ -10,7 +10,8 @@
   "author": "",
   "license": "ISC",
   "workspaces": [
-    "api"
+    "api",
+    "client"
   ],
   "dependencies": {
     "luxon": "^2.4.0"
