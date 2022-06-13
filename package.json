@@ -1,19 +1,27 @@
 {
-  "name": "kronos",
+  "name": "api",
   "version": "1.0.0",
   "description": "",
+  "main": "server.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "workspaces": [
-    "api",
-    "client"
-  ],
   "dependencies": {
-    "luxon": "^2.4.0"
+    "@fastify/env": "^4.0.0",
+    "@fastify/redis": "^6.0.0",
+    "ajv": "^8.11.0",
+    "ajv-formats": "^2.1.1",
+    "fastify": "^4.0.1",
+    "got": "^12.1.0",
+    "lodash-es": "^4.17.21",
+    "luxon": "^2.4.0",
+    "nodemon": "^2.0.16"
+  },
+  "devDependencies": {
+    "pino-pretty": "^8.0.0"
   }
 }
