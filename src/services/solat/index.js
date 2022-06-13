@@ -58,13 +58,13 @@ const fetchAndSaveYearlyData = async (zone) => {
 
   const formattedData = res.prayerTime.map((day) => ({
     date: DateTime.fromFormat(day.date, "dd-MMM-yyyy").toISODate(),
-    imsak: DateTime.fromFormat(day.imsak, "TT").toISOTime(),
-    fajr: DateTime.fromFormat(day.fajr, "TT").toISOTime(),
-    syuruk: DateTime.fromFormat(day.syuruk, "TT").toISOTime(),
-    dhuhr: DateTime.fromFormat(day.dhuhr, "TT").toISOTime(),
-    asr: DateTime.fromFormat(day.asr, "TT").toISOTime(),
-    maghrib: DateTime.fromFormat(day.maghrib, "TT").toISOTime(),
-    isha: DateTime.fromFormat(day.isha, "TT").toISOTime(),
+    imsak: DateTime.fromFormat(day.imsak, "TT").toFormat("t"),
+    fajr: DateTime.fromFormat(day.fajr, "TT").toFormat("t"),
+    syuruk: DateTime.fromFormat(day.syuruk, "TT").toFormat("t"),
+    dhuhr: DateTime.fromFormat(day.dhuhr, "TT").toFormat("t"),
+    asr: DateTime.fromFormat(day.asr, "TT").toFormat("t"),
+    maghrib: DateTime.fromFormat(day.maghrib, "TT").toFormat("t"),
+    isha: DateTime.fromFormat(day.isha, "TT").toFormat("t"),
   }));
 
   log.info(

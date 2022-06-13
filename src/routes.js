@@ -11,7 +11,7 @@ server.get("/", async () => {
 });
 
 server.get("/selectionoptions", async (req, res) => {
-  console.log("Getting options");
+  res.header("Access-Control-Allow-Origin", "*");
   return OPTIONS;
 });
 
@@ -38,6 +38,7 @@ server.get(
   async (req, res) => {
     const { date, zone } = req.query;
     const { log } = req;
+    res.header("Access-Control-Allow-Origin", "*");
 
     const data = await getTime(date, zone);
 
