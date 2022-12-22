@@ -7,7 +7,7 @@ import {
 import { getTime } from "./services/solat/index.js";
 
 server.get("/", async () => {
-  return { message: server.ENV_DATA.WELCOME_MESSAGE };
+  return { message: "Welcome to Kronos API" };
 });
 
 server.get("/selectionoptions", async (req, res) => {
